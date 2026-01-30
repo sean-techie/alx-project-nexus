@@ -1,216 +1,167 @@
-# ALX Project Nexus – Responsive E-commerce Frontend
+# URL Shortening Service
 
 ## Overview
+This project is a **frontend implementation of a URL shortening service**, similar to platforms like Bitly. The application enables users to submit long URLs, receive shortened versions through an external API, and manage those links in a clean, responsive interface.
 
-Project Nexus is a comprehensive documentation hub showcasing the major learnings, decisions, and practical insights gained while building a **fully responsive e-commerce frontend application** as part of the **ALX ProDev Frontend Engineering program**.
-
-This repository demonstrates modern frontend engineering practices, focusing on **UI architecture, responsiveness, scalability, and API-ready design**, while intentionally excluding backend implementation.
-
----
-
-## Project Overview
-
-This project is a **frontend-only e-commerce application** built from a Banani UI design.  
-The goal was to translate a professional design into a **pixel-accurate, responsive, and maintainable frontend**, ready to integrate with a backend API developed by another team member.
-
-The application simulates real-world frontend workflows by using **mock data and an abstraction layer** to mimic API behavior.
+The project focuses strictly on **frontend engineering**, UI/UX quality, and correct API consumption, without implementing backend logic.
 
 ---
 
-## Major Learnings
-
-### Key Technologies Covered
-
-- **Web Development**
-  - Next.js (App Router)
-  - Component-based architecture
-  - File-based routing
-
-- **Responsive Design**
-  - Mobile-first development
-  - Responsive layouts using Tailwind CSS
-  - Cross-device UI consistency
-
-- **Frontend Architecture**
-  - Separation of concerns
-  - API-ready frontend structure
-  - Scalable folder organization
+## Problem Statement
+Long URLs are difficult to share, remember, and manage. A URL shortening service simplifies this by converting long links into short, shareable URLs while optionally providing basic link management and analytics.
 
 ---
 
-## Important Frontend Development Concepts
-
-### Frameworks & Libraries
-
-- **Next.js**
-  - App Router architecture
-  - Dynamic routing for product pages
-  - SEO-friendly rendering
-  - Layout and page separation
-
-- **React**
-  - Reusable components
-  - Props and component composition
-  - Client vs server component awareness
+## Project Goals
+- Build a fully responsive frontend for a URL shortening service
+- Integrate seamlessly with an existing backend API
+- Translate a provided design into a functional web application
+- Demonstrate modern frontend best practices
+- Deliver a production-ready, portfolio-quality project
 
 ---
 
-### Styling & UI
+## Scope of the Project
 
-- **Tailwind CSS**
-  - Utility-first styling
-  - Responsive breakpoints (`sm`, `md`, `lg`, `xl`)
-  - Custom theming for colors and spacing
+### Included
+- URL shortening functionality
+- Link display and management UI
+- Responsive layouts for all screen sizes
+- Error, loading, and success state handling
+- Clean component-based architecture
 
-- **Component-Driven UI**
-  - Product cards
-  - Layout components (Navbar, Footer)
-  - Reusable UI elements (buttons, badges)
-
----
-
-### Language & Type Safety
-
-- **TypeScript**
-  - Strong typing for product data
-  - Interfaces for API contracts
-  - Improved maintainability and error prevention
+### Excluded
+- Backend logic and database handling
+- Redirect handling
+- Payments or e-commerce features
+- Authentication (unless provided by API)
 
 ---
 
-### API & Data Management (Frontend Perspective)
+## Features
 
-- Mock API layer to simulate backend behavior
-- Centralized data fetching logic
-- Loading, empty, and error UI states
-- Easy transition from mock data to real API integration
+### Core Functionality
+- Input field for long URLs
+- Client-side URL validation
+- API request to shorten URLs
+- Display of shortened URLs
+- Copy-to-clipboard functionality
+- Visual feedback on success and failure
 
----
+### Link Management
+- List of shortened links
+- Display original and shortened URLs
+- Metadata display (creation date, click count if available)
+- Clean dashboard layout
 
-## System Design & Analysis
-
-### Frontend Architecture
-
-- Clear separation between:
-  - UI components
-  - Data fetching logic
-  - Page routing
-- API abstraction layer to avoid tight coupling
-- Folder structure designed for team collaboration
-
----
-
-### Performance Considerations
-
-- Optimized component reuse
-- Lightweight Tailwind utility styling
-- Prepared structure for future lazy loading and optimization
+### User Experience
+- Mobile-first responsive design
+- Loading indicators and disabled states
+- Empty and error states
+- Accessible form elements and buttons
 
 ---
 
-## Challenges Faced & Solutions Implemented
+## Tech Stack
 
-### Challenge 1: Building Without a Backend API
+### Frontend
+- **Next.js** – React framework for production-ready applications
+- **React** – Component-based UI development
+- **TypeScript** – Static typing for scalability and maintainability
+- **Tailwind CSS** – Utility-first styling and responsive design
 
-**Problem:**  
-Developing the frontend without an available backend risked hardcoding data and limiting future integration.
-
-**Solution:**  
-Implemented a mock API layer (`lib/api.ts`) that simulates real API calls, allowing seamless replacement with real endpoints later.
-
----
-
-### Challenge 2: Translating Design to Code
-
-**Problem:**  
-Banani designs require careful attention to spacing, typography, and visual hierarchy.
-
-**Solution:**  
-Broke the UI into reusable components and relied on Tailwind CSS utilities to achieve pixel-accurate layouts.
+### API Integration
+- RESTful API consumption
+- Async/Await for data fetching
+- Centralized API service layer
+- Error handling and response validation
 
 ---
 
-### Challenge 3: Responsive Design Complexity
+## Application Structure
+src/
+├── components/ # Reusable UI components
+├── pages/ # Application routes
+├── hooks/ # Custom React hooks
+├── services/ # API service layer
+├── styles/ # Global styles and Tailwind config
+├── types/ # TypeScript interfaces and types
+└── utils/ # Helper utilities
 
-**Problem:**  
-Ensuring consistent user experience across mobile, tablet, and desktop devices.
-
-**Solution:**  
-Adopted a strict **mobile-first approach**, testing layouts continuously across breakpoints.
-
----
-
-### Challenge 4: State & UI Feedback
-
-**Problem:**  
-Handling loading, empty, and error states without real API responses.
-
-**Solution:**  
-Implemented skeleton loaders, empty state messaging, and error placeholders to simulate real application behavior.
 
 ---
 
-## Best Practices & Personal Takeaways
-
-### Development Best Practices
-
-- Build reusable, single-responsibility components
-- Keep UI logic separate from data logic
-- Design frontend systems as if the backend already exists
 
 ---
 
-### Code Quality & Maintainability
+## Development Process
 
-- Consistent naming conventions
-- Clear folder structure
-- Typed data contracts using TypeScript
+### Design Implementation
+- UI built from a provided design reference
+- Consistent spacing, typography, and color usage
+- Reusable components for scalability
 
----
+### State Management
+- Local component state for UI interactions
+- Centralized API logic
+- Clear separation of concerns
 
-### Responsive Design
-
-- Mobile-first layouts
-- Flexible grid and flexbox usage
-- Continuous testing across screen sizes
-
----
-
-### Collaboration Readiness
-
-- API-ready frontend architecture
-- Clear separation of responsibilities
-- Easy onboarding for backend developers
+### Responsiveness
+- Mobile-first development approach
+- Tailwind CSS breakpoints
+- Tested across multiple screen sizes
 
 ---
 
-## Key Takeaways
+## Challenges and Solutions
 
-- **Frontend engineering goes beyond UI** — architecture and scalability matter.
-- **Design translation is a skill** that requires attention to detail and structure.
-- **Responsiveness is not optional** in modern applications.
-- **Mock APIs are essential** for frontend-only development workflows.
-- **Clean architecture simplifies collaboration** and future expansion.
+### Challenge: Managing API States
+**Issue:** Handling loading, success, and error states during API requests.
+
+**Solution:** Implemented clear UI feedback using spinners, disabled buttons, and descriptive error messages.
 
 ---
 
-## Repository Structure
+### Challenge: Responsive UI Across Devices
+**Issue:** Maintaining consistency across mobile, tablet, and desktop views.
 
-```txt
-app/
- ├─ page.tsx                # Home page
- ├─ products/
- │   ├─ page.tsx            # Product listing
- │   └─ [id]/page.tsx       # Product details
- ├─ cart/
- ├─ checkout/
-components/
- ├─ layout/
- ├─ product/
- ├─ cart/
- └─ ui/
-lib/
- ├─ api.ts                  # API abstraction layer
- └─ mockData.ts             # Temporary mock data
-types/
- └─ product.ts
+**Solution:** Adopted a mobile-first approach with flexible layouts and Tailwind CSS responsive utilities.
+
+---
+
+### Challenge: Clean API Integration
+**Issue:** Avoiding duplicated API logic across components.
+
+**Solution:** Created a centralized API service layer and reusable custom hooks.
+
+---
+
+## Best Practices Applied
+- Component-driven development
+- Clear and consistent naming conventions
+- Type-safe API responses using TypeScript
+- Separation of UI and business logic
+- Reusable and scalable project structure
+
+---
+
+## Limitations
+- Frontend-only implementation
+- No user authentication unless supported by API
+- Analytics limited to API-provided data
+- No backend control or data persistence logic
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v18 or later)
+- npm or yarn
+
+### Installation
+```bash
+git clone https://github.com/yourusername/url-shortening-service.git
+cd url-shortening-service
+npm install
+
