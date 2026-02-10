@@ -1,6 +1,8 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/design/Hero";
+import Features from "@/components/design/Features";
+import CTA from "@/components/design/CTA";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Navbar />
       <main className="flex w-full flex-col items-center justify-center py-8 px-8 bg-white dark:bg-black sm:items-start">
         <Hero />
+        <Features />
+        <CTA />
       </main>
       <Footer />
     </div>
